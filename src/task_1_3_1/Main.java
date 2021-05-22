@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Main {
     private static final String ROOT_DIR = "D://Games//";
     private static final String LOG_PATH = ROOT_DIR + "temp//temp.txt";
-    private static StringBuilder Logger = new StringBuilder();
+    private static StringBuilder logger = new StringBuilder();
 
     public static void main(String[] args) {
         createFileOrDirectory(ROOT_DIR + "test", false);
