@@ -23,26 +23,26 @@ public class Main {
         createFileOrDirectory(ROOT_DIR + "src//main//Main.java", true);
         createFileOrDirectory(ROOT_DIR + "src//main//Utils.java", true);
         createFileOrDirectory(ROOT_DIR + "temp//temp.txt", true);
-        writeLog(Logger.toString());
+        writeLog(logger.toString());
     }
 
     public static void createFileOrDirectory(String name, boolean isFile) {
         if (isFile) {
             try {
                 if (new File(name).createNewFile()) {
-                    Logger.append("File " + name + " has been successfully created\n");
+                    logger.append("File " + name + " has been successfully created\n");
                 } else {
-                    Logger.append("File " + name + " already exists\n");
+                    logger.append("File " + name + " already exists\n");
                 }
             } catch (IOException e) {
-                Logger.append("File " + name + " was not created. Error: "
+                logger.append("File " + name + " was not created. Error: "
                         + e.getMessage() + "\n");
             }
         } else {
             if (new File(name).mkdir()) {
-                Logger.append("Directory " + name + " has been successfully created\n");
+                logger.append("Directory " + name + " has been successfully created\n");
             } else {
-                Logger.append("Directory " + name + " already exists\n");
+                logger.append("Directory " + name + " already exists\n");
             }
         }
     }
