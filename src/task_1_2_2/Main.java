@@ -53,7 +53,6 @@ public class Main {
     }
 
     public static void print(Collection list) {
-        list.stream()
-                .forEach(System.out::println);
+        list.forEach(System.out::println);
     }
 }
